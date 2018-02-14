@@ -16,6 +16,7 @@ Enemy.prototype.update = function (dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    this.x = this.x + this.speed * dt;
 };
 
 // Draw the enemy on the screen, required method for game
@@ -38,15 +39,30 @@ Player.prototype.update = function (dt) {
 
 }
 
+// Renders the image of the user into the game
 Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.user), this.x, this.y);
 };
+
+// Allows the user to use the arrow keys to jump from tile to tile
+Player.prototype.handleInput = function (keyPress) {
+    if (keyPress == 'left') {
+        this.x = this.x - 102;
+    } else if (keyPress == 'right') {
+        this.x = this.x + 102;
+    } else if (keyPress == 'up') {
+        this.y = this.y - 83;
+    } else if (keyPress == 'down') {
+        this.y = this.y + 83;
+    }
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-
+var allEnemies = [];
+var player = new Player(202, 405, 1);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
