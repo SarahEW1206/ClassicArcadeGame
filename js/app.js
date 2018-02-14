@@ -65,7 +65,14 @@ Player.prototype.handleInput = function (keyPress) {
 // Place the player object in a variable called player
 
 var allEnemies = [];
-var player = new Player(202, 405, 1);
+var enemyLocation = [63, 147, 230];
+
+enemyLocation.forEach(function (locationY) {
+    enemy = new Enemy(0, locationY, 50);
+    allEnemies.push(enemy);
+});
+
+var player = new Player(202, 405);
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
