@@ -48,11 +48,14 @@ Player.prototype.render = function () {
 Player.prototype.handleInput = function (keyPress) {
     if (keyPress == 'left') {
         this.x = this.x - 102;
-    } else if (keyPress == 'right') {
+    }
+    if (keyPress == 'right') {
         this.x = this.x + 102;
-    } else if (keyPress == 'up') {
+    }
+    if (keyPress == 'up') {
         this.y = this.y - 83;
-    } else if (keyPress == 'down') {
+    }
+    if (keyPress == 'down') {
         this.y = this.y + 83;
     }
 }
