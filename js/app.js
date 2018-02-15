@@ -19,11 +19,15 @@ Enemy.prototype.update = function (dt) {
     this.x = this.x + this.speed * dt; // !Ben: randomize here, 
     // add collision detection
 
+    // Once enemies are off the canvas, they reappear randomly with different speeds
     if (this.x > 510) {
         this.x = -50;
         this.speed = 100 + Math.floor(Math.random() * 222);
     }
-};
+
+    // Checks for collisions between the player and the enemies
+
+}
 
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function () {
