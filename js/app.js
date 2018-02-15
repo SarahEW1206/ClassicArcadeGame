@@ -16,7 +16,13 @@ Enemy.prototype.update = function (dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x = this.x + this.speed * dt;
+    this.x = this.x + this.speed * dt; // !Ben: randomize here, 
+    // add collision detection
+
+    if (this.x > 510) {
+        this.x = -50;
+        this.speed = 100 + Math.floor(Math.random() * 222);
+    }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -48,14 +54,11 @@ Player.prototype.render = function () {
 Player.prototype.handleInput = function (keyPress) {
     if (keyPress == 'left') {
         this.x = this.x - 102;
-    }
-    if (keyPress == 'right') {
+    } else if (keyPress == 'right') {
         this.x = this.x + 102;
-    }
-    if (keyPress == 'up') {
+    } else if (keyPress == 'up') {
         this.y = this.y - 83;
-    }
-    if (keyPress == 'down') {
+    } else if (keyPress == 'down') {
         this.y = this.y + 83;
     }
 }
@@ -67,8 +70,8 @@ Player.prototype.handleInput = function (keyPress) {
 var allEnemies = [];
 var enemyLocation = [63, 147, 230];
 
-enemyLocation.forEach(function (locationY) {
-    enemy = new Enemy(0, locationY, 50);
+enemyLocation.forEach(function (locationX) {
+    enemy = new Enemy(0, locationX, 50);
     allEnemies.push(enemy);
 });
 
