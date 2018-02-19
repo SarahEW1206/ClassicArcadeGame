@@ -28,12 +28,7 @@ In my Front End Udacity nanodegree, I had to code a classic arcade game based on
 
 * Getting started Udacity excersize: 
   * https://github.com/udacity/frontend-nanodegree-arcade-game
-
-
-## Known Issues:
-
-* If you match cards too quickly together, a single card may be mathced. 
-
+  
 
 ## Inspiration
 * Collision function: https://stackoverflow.com/questions/2440377/javascript-collision-detection
