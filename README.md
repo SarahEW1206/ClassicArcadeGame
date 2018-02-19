@@ -6,7 +6,7 @@ In my Front End Udacity nanodegree, I had to code a classic arcade game based on
 ## Installing from Source
 
 1. Clone the following repo: 
-  * git clone https://github.com/Ul1ra/ClassicArcadeGame
+   * git clone https://github.com/Ul1ra/ClassicArcadeGame
 
 2. Load index.html in browser.
 
@@ -15,7 +15,7 @@ In my Front End Udacity nanodegree, I had to code a classic arcade game based on
 
 ## How to Play:
 
-* The goal is to match is to get to the water. 
+  * The goal is to match is to get to the water. 
 
 1. Using the arrow keys on your keyboard, move upwards.
 
