@@ -15,7 +15,7 @@ var Enemy = function (x, y, speed) {
 Enemy.prototype.update = function (dt) {
 
     // Multiplies the speed by the dt parameter on the x axis
-    this.x = this.x + this.speed * dt;
+    this.x += this.speed * dt;
 
     // Once enemies are off the canvas, they reappear randomly with different speeds
     if (this.x > 510) {
