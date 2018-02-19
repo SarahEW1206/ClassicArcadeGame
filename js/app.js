@@ -72,7 +72,7 @@ Player.prototype.handleInput = function (keyPress) {
         this.x += 102;
     }
     // Enables user on up arrow key to move upwards on the y axis by 83
-    if (keyPress == 'up') {
+    if (keyPress == 'up' && this.y > 0) {
         this.y -= 83;
     }
     // Enables user on down arrow key to move downwards on the y axis by 83
@@ -84,8 +84,11 @@ Player.prototype.handleInput = function (keyPress) {
     // Once the user reaches the top of the page; the water, the user is
     // Instantly reset to the starting position
     if (this.y < 0) {
-        player.x = 202;
-        player.y = 405;
+        setTimeout(function () {
+            player.x = 202;
+            player.y = 405;
+        }, 600);
+
     }
 }
 
