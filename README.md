@@ -14,8 +14,7 @@ In my Front End Udacity nanodegree, I had to code a classic arcade game based on
 
 
 ## How to Play:
-
-0. The goal is to match is to get to the water. 
+The goal is to match is to jump into the water. 
 
 1. Using the arrow keys on your keyboard, move upwards.
 
