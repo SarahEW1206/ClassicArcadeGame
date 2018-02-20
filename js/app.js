@@ -8,7 +8,7 @@ var Enemy = function (x, y, speed) {
 
     // The image of the enemy of cockroach that is added to the playing field 
     this.sprite = 'images/enemy-bug.png';
-}
+};
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
@@ -21,7 +21,7 @@ Enemy.prototype.update = function (dt) {
     if (this.x > 510) {
         this.x = -50;
         this.speed = 100 + Math.floor(Math.random() * 222);
-    }
+    };
 
     // Checks for collisions between the player and the enemies
     if (player.x < this.x + 80 &&
@@ -30,13 +30,13 @@ Enemy.prototype.update = function (dt) {
         60 + player.y > this.y) {
         player.x = 202;
         player.y = 405;
-    }
-}
+    };
+};
 
 // Renders the enemy into the game
 Enemy.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-}
+};
 
 // Player class focusing on x and y axis
 var Player = function (x, y) {
@@ -47,16 +47,16 @@ var Player = function (x, y) {
 
     //The image of the player of horn-girl is added to the playing field 
     this.player = 'images/char-horn-girl.png';
-}
+};
 
 Player.prototype.update = function (dt) {
 
-}
+};
 
 // Renders the image of the user into the game
 Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
-}
+};
 
 // Allows the user to use the arrow keys to jump from tile to tile
 Player.prototype.handleInput = function (keyPress) {
@@ -65,21 +65,24 @@ Player.prototype.handleInput = function (keyPress) {
     // Also enables user not to go off the game tiles on the left side
     if (keyPress == 'left' && this.x > 0) {
         this.x -= 102;
-    }
+    };
+
     // Enables user on right arrow key to move right on the x axis by 102
     // Also enables user not to go off the game tiles on the right side
     if (keyPress == 'right' && this.x < 405) {
         this.x += 102;
-    }
+    };
+
     // Enables user on up arrow key to move upwards on the y axis by 83
     if (keyPress == 'up' && this.y > 0) {
         this.y -= 83;
-    }
+    };
+
     // Enables user on down arrow key to move downwards on the y axis by 83
     // Also enables user not to go off the game tiles on the bottom side
     if (keyPress == 'down' && this.y < 405) {
         this.y += 83;
-    }
+    };
 
     // Once the user reaches the top of the page; the water, the user is
     // Instantly reset to the starting position
@@ -89,8 +92,8 @@ Player.prototype.handleInput = function (keyPress) {
             this.y = 405;
         }, 600);
 
-    }
-}
+    };
+};
 
 
 // All enemies are placed in an array
@@ -118,6 +121,6 @@ document.addEventListener('keyup', function (e) {
         38: 'up',
         39: 'right',
         40: 'down'
-    }
+    };
     player.handleInput(allowedKeys[e.keyCode]);
 });
