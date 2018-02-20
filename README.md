@@ -6,7 +6,7 @@ In my Front End Udacity nanodegree, I had to code a classic arcade game based on
 ## Installing from Source
 
 1. Clone the following repo: 
-  * git clone https://github.com/Ul1ra/ClassicArcadeGame
+   * git clone https://github.com/Ul1ra/ClassicArcadeGame
 
 2. Load index.html in browser.
 
@@ -14,8 +14,8 @@ In my Front End Udacity nanodegree, I had to code a classic arcade game based on
 
 
 ## How to Play:
-
-* The goal is to match is to get to the water. 
+The goal is to match is to jump into the water. 
+Click in the following link to play: https://ul1ra.github.io/ClassicArcadeGame/
 
 1. Using the arrow keys on your keyboard, move upwards.
 
@@ -28,12 +28,7 @@ In my Front End Udacity nanodegree, I had to code a classic arcade game based on
 
 * Getting started Udacity excersize: 
   * https://github.com/udacity/frontend-nanodegree-arcade-game
-
-
-## Known Issues:
-
-* If you match cards too quickly together, a single card may be mathced. 
-
+  
 
 ## Inspiration
 * Collision function: https://stackoverflow.com/questions/2440377/javascript-collision-detection
