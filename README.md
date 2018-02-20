@@ -15,6 +15,7 @@ In my Front End Udacity nanodegree, I had to code a classic arcade game based on
 
 ## How to Play:
 The goal is to match is to jump into the water. 
+Click in the following link to play: https://ul1ra.github.io/ClassicArcadeGame/
 
 1. Using the arrow keys on your keyboard, move upwards.
 
