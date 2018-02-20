@@ -85,8 +85,8 @@ Player.prototype.handleInput = function (keyPress) {
     // Instantly reset to the starting position
     if (this.y < 0) {
         setTimeout(function () {
-            player.x = 202;
-            player.y = 405;
+            this.x = 202;
+            this.y = 405;
         }, 600);
 
     }
