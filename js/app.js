@@ -87,11 +87,10 @@ Player.prototype.handleInput = function (keyPress) {
     // Once the user reaches the top of the page; the water, the user is
     // Instantly reset to the starting position
     if (this.y < 0) {
-        setTimeout(function () {
+        setTimeout(() => {
             this.x = 202;
             this.y = 405;
-        }, 600);
-
+        }, 800);
     };
 };
 
